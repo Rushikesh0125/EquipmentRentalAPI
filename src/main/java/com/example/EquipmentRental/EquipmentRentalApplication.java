@@ -14,6 +14,7 @@ public class EquipmentRentalApplication {
 		SpringApplication.run(EquipmentRentalApplication.class, args);
 	}
 
+	//We are loading some set of equipment data in equipment table
 	@Bean
 	public CommandLineRunner loadData(EquipmentRepository equipmentRepository){
 		return  args -> {

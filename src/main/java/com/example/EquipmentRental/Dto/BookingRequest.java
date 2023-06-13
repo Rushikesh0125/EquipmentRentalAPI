@@ -24,7 +24,12 @@ import java.util.Date;
 @NoArgsConstructor
 public class BookingRequest {
 
-    //Request should contain following parameters
+    /*
+    * Booking Put Request should contain following attributes
+    * Each attribute is following certain rules
+    * equipment Id can't be null
+    * while start and end date need to follow the format "yyyy-MM-dd HH:mm:ss.SSS"
+     */
     @NotNull
     private Long equipmentId;
 

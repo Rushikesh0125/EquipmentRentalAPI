@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EquipmentResponse {
+
+    /*
+     * Equipment Get Response will contain following attributes
+     */
     private Long equipmentId;
     private double pricePerHour;
     private String name;

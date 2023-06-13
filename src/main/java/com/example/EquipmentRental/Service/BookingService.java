@@ -45,10 +45,12 @@ public class BookingService {
      */
     public void addBooking(@RequestBody BookingRequest bookingRequest) throws Exception{
         double totalAmount = getPricePerHour(bookingRequest);
+        //throw exception if start date falls after end date
         if(bookingRequest.getStartDate().isAfter(bookingRequest.getEndDate())){
             throw new Exception("Invalid Start or End date");
         }
 
+        //build the booking object
         Booking booking = Booking.builder()
                 .startDate(bookingRequest.getStartDate())
                 .endDate(bookingRequest.getEndDate())
@@ -56,6 +58,7 @@ public class BookingService {
                 .totalAmount(totalAmount)
                 .build();
 
+        //save to repository
         bookingRepository.save(booking);
     }
 }
