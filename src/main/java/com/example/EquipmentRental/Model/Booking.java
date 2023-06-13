@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Table(name="bookings")
@@ -24,5 +23,8 @@ public class Booking {
     private Long equipmentId;
 
     private LocalDateTime startDate;
+
     private LocalDateTime endDate;
+
+    private double totalAmount;
 }

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class EquipmentResponse {
     private Long equipmentId;
-    private double pricePerDay;
+    private double pricePerHour;
     private String name;
     private String category;
     private String image;
