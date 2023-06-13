@@ -16,6 +16,13 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EquipmentRequest {
+
+    /*
+     * Equipment Get Request should contain following attributes
+     * Each attribute is following certain rules
+     * Category can't be null as it is being used as filter for finding Equipment
+     * while start and end date need to follow the format "yyyy-MM-dd HH:mm:ss.SSS"
+     */
     @NotBlank(message = "Category is required")
     private String category;
 
